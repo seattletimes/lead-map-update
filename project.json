@@ -2,11 +2,11 @@
   "s3": {
     "stage": {
       "bucket": "projects-staging.seattletimes.com",
-      "path": "ipad-wrapped"
+      "path": "scientific-compartment"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2019/metro/lead-sps-update"
     }
   },
   "title": "",
