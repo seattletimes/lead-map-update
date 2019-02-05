@@ -18,61 +18,38 @@
   <responsive-child class="map-container">
     <div class="outmost">
       <section class="chatter">
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat aliquam lectus vitae porttitor. Donec euismod sem dui, ac gravida sem mattis sed. Fusce porttitor accumsan sem elementum convallis. Nam id augue lobortis, laoreet magna non,
-          sodales risus. </p>
+        <h1>Lead in Seattle Public Schools</h1>
+        <p>Washington state lawmakers soon may move to set a stricter limit for lead in drinking water at public schools. The proposed legislation would require parent notification at 89 of 99 facilities in the Seattle school district where lead levels topped 1 part per billion.</p>
       </section>
 
-      <div class="aspect-ratio-outer">
-        <div class="aspect-ratio-inner">
+      <div class="legend">
+          <h1>Are any water sources at this school above the lead limit?</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: #f46d43"></span> Yes</li>
+            <li>
+              <span class="block" style="background-color: #abd9e9"></span> No</li>
+<!--             <li>
+              <span class="block" style="background-color: #f46d43"></span> 4 - 6</li>
+            <li>
+              <span class="block" style="background-color: #d73027"></span> 7 or more</li> -->
+          </ul>
+        </div>
 
-          <leaflet-map zoom=10>
+      <div class="aspect-ratio-outer">
+<!--         <h2>Chicago pilot lead limit (2 ppb)</h2> -->
+        <p>89 of 99 facilities found with at least one water source with lead above 2 ppb</p>
+        <div class="aspect-ratio-inner">
+          <leaflet-map zoom=11>
             <tile-layer layer="cartoPositron"></tile-layer>
-            <geo-json>
-              <geo-data>
-                <%= t.include("states.geo.json") %>
-              </geo-data>
-              <geo-style>{ "weight": 1, "color": "#000", "opacity":0.1 }</geo-style>
-              <geo-palette property="CENSUSAREA">
-                <color-mapping max=10000 color="purple"></color-mapping>
-                <color-mapping min=10001 max=50000 color="blue"></color-mapping>
-                <color-mapping min=50001 max=100000 color="green"></color-mapping>
-                <color-mapping min=100001 max=200000 color="yellow"></color-mapping>
-                <color-mapping min=200001 color="orange"></color-mapping>
-              </geo-palette>
-              <geo-popup>
-                <h1 class="bigheader">{{NAME}}</h1>
-                <ul>
-                  <li> Size: {{CENSUSAREA}}
-                    <li> State ID: {{STATE}}
-                      <li> Geo ID: {{GEO_ID}}
-                </ul>
-              </geo-popup>
-            </geo-json>
           </leaflet-map>
 
         </div>
-        <aside class="legend">
-          <h1>Map legend</h1>
-          <ul class="scale">
-            <li>
-              <span class="block" style="background-color: red"></span> Cherry</li>
-            <li>
-              <span class="block" style="background-color: orange"></span> Orange</li>
-            <li>
-              <span class="block" style="background-color: yellow"></span> Lemon</li>
-            <li>
-              <span class="block" style="background-color: green"></span> Lime</li>
-            <li>
-              <span class="block" style="background-color: blue"></span> Blueberry</li>
-          </ul>
-        </aside>
-      </div>
 
-
-      <div class="source">Source: Name of source
-        <span class="credit">XXX XXX / THE SEATTLE TIMES</div>
+      <div class="source">Data is from early 2018 and may have changed since.<br>Source: Seattle Public Schools
+        <span class="credit">Emily M. Eng / THE SEATTLE TIMES</div>
     </div>
+
   </responsive-child>
 
   <script src="app.js"></script>

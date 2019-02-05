@@ -1,25 +1,16 @@
-<div class="popuptext">
+<div class="popup">
 
-<!-- class types for popup - descript, note, address, emphasis, popup-img, credit -->
+  <h1 class="bigheader">{{SchoolLong}}</h1>
+<br>
+  <div class="emphasis"><b>LEAD LIMIT (exceeding 10 ppb - Current SPS limit)</b></div>
+  <div class="descript"><b>{{leadSourceAboveTen}}/{{allSource}}</b> water sources<br><b>{{aboveTen}}%</b> of all sources</div>
+<br>
+  <div class="emphasis"><b>LEAD LIMIT (exceeding 2 ppb)</b></div>
+  <div class="descript"><b>{{leadSourceAboveTwo}}/{{allSource}}</b> water sources<br><b>{{aboveTwo}}%</b> of all sources</div>
 
-<!--   {{#image}}
-    <video autoplay loop class="popup-img">
-      <source src="{{image}}" type="video/mp4">Your browser does not support the video tag.
-    </video>
-    <div class="credit">Corinne Chin / The Seattle Times</div>
-  {{/image}}
- -->
-  <h2 class="bigheader">{{name}}</h2>
-
-  <div class="address">{{address}}</div>
-
-  {{#description}}
-    <div class="descript">{{description}}</div>
-  {{/description}} 
-
-<!--   {{#link}}
-    <div class="note"><a href="{{link}}" target="_blank"><em>(Source)</em></a></div>
-  {{/link}} -->
-
+<br>
+  <div class="descript"><b>Most recent test: {{testDate}}</b><br> - Highest lead level recorded: {{lead}} ppb<br>
+  {{#remediation}} - Action taken: {{remediation}}</div>
+  {{/remediation}} 
 
 </div>
